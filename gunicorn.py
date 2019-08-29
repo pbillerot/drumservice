@@ -1,0 +1,11 @@
+command = '/var/www/__APP_NAME__/venv/bin/gunicorn'
+pythonpath = '/var/www/__APP_NAME__'
+workers = 3
+user = '__USER_NAME__'
+bind = '127.0.0.1:8000'
+pid = '/run/gunicorn/__APP_NAME__-pid'
+errorlog = '/var/log/__APP_NAME__/error.log'
+accesslog = '/var/log/__APP_NAME__/access.log'
+access_log_format = '%({X-Real-IP}i)s %({X-Forwarded-For}i)s %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
+loglevel = 'warning'
+capture_output = True
